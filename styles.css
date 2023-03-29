@@ -1,0 +1,204 @@
+/* IMPORTED FONT */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+/* GLOBAL STYLES */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* COLORS */
+    --red:hsl(0, 78%, 62%);
+    --cyan:hsl(180, 62%, 55%);
+    --orange:hsl(34, 97%, 64%);
+    --blue:hsl(212, 86%, 64%);
+    --dark-blue:hsl(234, 12%, 34%);
+    --gray-blue:hsl(229, 6%, 66%);
+    --gray:hsl(0, 0%, 98%);
+    /* FONT-WEIGHT */
+    --fw-thin:200;
+    --fw-normal:400;
+    --fw-bold:600;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: var(--fw-normal);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--gray);
+}
+/* TITLE */
+.main-title{
+    font-weight: var(--fw-bold);
+    width: 80%;
+}
+/* SUBTITLE */
+.subtitle{
+    font-weight: var(--fw-thin);
+    color: var(--dark-blue);
+    margin-top: 3rem;
+    width: 80%;
+}
+
+h3{
+    font-weight: var(--fw-bold);
+    font-size: 1.25rem;
+}
+p{
+    color: var(--gray-blue);
+}
+.description{
+    width: 80%;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    word-spacing: 2px;
+    font-weight:400;
+    letter-spacing: 1.2px;
+    line-height: 24px;
+}
+/* GRID */
+.grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+
+}
+/* MIDDLE COLUMN WRAPPER */
+.middle-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* SUPERVISOR CARD */
+.supervisor-card{
+    width: 80%;
+    background-color: white;
+    box-shadow: 0px 20px 30px rgba(0,0,0,0.08);
+    border-radius: 8px;
+    padding: 1rem;
+    min-height: 13.5rem;
+    border-top: 4px solid var(--cyan);
+    position: relative;
+    margin-bottom: 2rem;
+}
+.supervisor-card p{
+    width: 90%;
+}
+.supervisor-card img{
+    width: 13%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+/* TEAM CARD */
+.team-card{
+    width: 80%;
+    background-color: white;
+    box-shadow: 0px 20px 30px rgba(0,0,0,0.08);
+    border-radius: 8px;
+    padding: 1rem;
+    min-height: 13.5rem;
+    border-top: 4px solid var(--red);
+    position: relative;
+    margin-bottom: 2rem;
+}
+.team-card p{
+    width: 90%;
+}
+.team-card img{
+    width: 13%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+/* KARMA CARD */
+.karma-card{
+    width: 80%;
+    background-color: white;
+    box-shadow: 0px 20px 30px rgba(0,0,0,0.08);
+    border-radius: 8px;
+    padding: 1rem;
+    min-height: 13.5rem;
+    border-top: 4px solid var(--orange);
+    position: relative;
+    margin-bottom: 2rem; 
+}
+.karma-card p{
+    width: 90%;
+}
+.karma-card img{
+    width: 13%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+/* CALCULATOR CARD */
+.calculator-card{
+    width: 80%;
+    background-color: white;
+    box-shadow: 0px 20px 30px rgba(0,0,0,0.08);
+    border-radius: 8px;
+    padding: 1rem;
+    min-height: 13.5rem;
+    border-top: 4px solid var(--blue);
+    position: relative;
+    margin-bottom: 4rem;
+}
+.calculator-card p{
+    width: 90%;
+}
+.calculator-card img{
+    width: 13%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 767px) {
+    /* DESKTOP GRID */
+    .grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    /* DESKTOP TITLES */
+    .main-title, .subtitle{
+        text-align: center;
+        width: 100%;
+        font-size: 2rem;
+    }
+    .description{
+        text-align: center;
+        width: 35%;
+    }
+    /* CARDS */
+    .calculator-card, .karma-card, .team-card, .supervisor-card{
+        min-height: 16rem;
+    }
+    /* PUSHING RIGHT AND LEFT CARDS IN */
+    .supervisor-card{
+        margin-right: -8rem;
+    }
+    .calculator-card{
+        margin-left: -8rem;
+    }
+}
